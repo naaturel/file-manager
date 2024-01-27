@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="" />
+    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/DirectoryAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Size.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +29,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2bXE9lqoqA23IQV28zHnoYTRVzV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/prog/file-manager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,11 +85,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706352875936</updated>
-      <workItem from="1706352876686" duration="10256000" />
+      <workItem from="1706352876686" duration="13398000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1706367001184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706367001184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
