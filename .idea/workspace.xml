@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="Clean up previous code">
+    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="Fix display of directory size but size calculation process isn't threaded anymore">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/SizeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/SizeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/be/naaturel/filemanager/start-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/naaturel/filemanager/start-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -49,6 +52,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/prog/file-manager",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,6 +61,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\prog\file-manager\src\main\resources\style" />
+      <recent name="D:\prog\file-manager\src\main\resources" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.naaturel.filemanager.App" />
@@ -71,11 +81,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.HelloApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -85,7 +90,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706352875936</updated>
-      <workItem from="1706352876686" duration="30553000" />
+      <workItem from="1706352876686" duration="31978000" />
+      <workItem from="1706542772205" duration="338000" />
+      <workItem from="1706557378370" duration="1736000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1706367001184</created>
@@ -108,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706540214591</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix display of directory size but size calculation process isn't threaded anymore">
+      <created>1706541337839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706541337839</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +143,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Handle analyser in a cleaner way" />
     <MESSAGE value="Clean up previous code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up previous code" />
+    <MESSAGE value="Fix display of directory size but size calculation process isn't threaded anymore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix display of directory size but size calculation process isn't threaded anymore" />
   </component>
 </project>
