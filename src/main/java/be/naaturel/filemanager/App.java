@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application implements IChangeView {
 
@@ -17,6 +18,10 @@ public class App extends Application implements IChangeView {
     public App() throws IOException {
          fxmlLoader = new FXMLLoader(App.class.getResource(mainView));
          scene = new Scene(fxmlLoader.load(), 1080, 720);
+        scene.getStylesheets().add(
+                Objects.requireNonNull(
+                        getClass().getResource("/style/style.css")
+                ).toExternalForm());
     }
 
     @Override
