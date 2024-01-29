@@ -1,13 +1,12 @@
 package be.naaturel.filemanager.controller;
 
-import be.naaturel.filemanager.model.DirectoryAnalyser;
+import be.naaturel.filemanager.model.Analyser;
+import be.naaturel.filemanager.model.Directory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
 import java.util.List;
 
 public class StartController {
@@ -16,23 +15,21 @@ public class StartController {
     public TextField chosenPath;
     @FXML
     public VBox analyseBox;
-    private final DirectoryAnalyser analyser = new DirectoryAnalyser();
+    private Analyser analyser;
 
     @FXML
-    protected void onStartButtonClick() throws IOException {
+    protected void onStartButtonClick() {
+        analyser = new Analyser(extractPath());
+        analyser.startAnalyse();
         clearAnalyseBox();
-        getFiles();
+        displayInfos();
     }
 
-    private void getFiles() throws IOException {
-        List<String> files = this.analyser.listFilesOf(extractPath());
+    private void displayInfos(){
 
-        for (String file : files) {
-
-            String completePath = String.format("%s/%s/", extractPath(), file);
-            double size = this.analyser.getGbSizeOf(completePath);
+        for (Directory d : this.analyser.getDir().getSubDirectories()) {
             Label l = new Label();
-            l.setText(file + " (" + String.format("%.2f", size) + " Gb)");
+            l.setText(String.format("%s %.2f", d.getPath(), d.getSize("gb")));
             analyseBox.getChildren().add(l);
         }
     }
@@ -44,5 +41,4 @@ public class StartController {
     private void clearAnalyseBox(){
         analyseBox.getChildren().clear();
     }
-
 }
