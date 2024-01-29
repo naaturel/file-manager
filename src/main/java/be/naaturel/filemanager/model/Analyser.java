@@ -14,35 +14,17 @@ public class Analyser {
 
     private final Directory dir;
 
-    private SizeCalculator calculator;
-
     public Analyser(String path){
         this.dir = new Directory(path);
-        this.calculator = new SizeCalculator(this.dir);
     }
 
     public void startAnalyse(){
-        this.dir.listElements();
-        calculator.launch();
+        this.dir.calculateInfos();
     }
 
     public Directory getDir(){
         return this.dir;
     }
-
-    public Task<Void> getTask(){
-        return this.calculator.getTask();
-    }
-
-
-    /*public List<String> listFiles() {
-        return Stream.of(
-                    Objects.requireNonNull(
-                    new File(dir.getPath()).listFiles())
-                )
-                .map(File::getName)
-                .collect(Collectors.toList());
-    }*/
 
     public double getSize() {
         return this.dir.getSize("gb");

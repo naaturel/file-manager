@@ -15,7 +15,6 @@ public class Directory {
         this.path = dir;
         this.subDirectories = new ArrayList<>();
         this.files = new ArrayList<>();
-        this.size = new Size();
     }
 
     public boolean hasSubDirectories(){
@@ -42,7 +41,10 @@ public class Directory {
         this.size.setValue(value);
     }
 
-    public double getSize(String format){
+    public double getSize(String format) throws RuntimeException{
+
+        if(size == null) throw new RuntimeException("Size hasn't been calculated yet");
+
         switch (format.toLowerCase()){
             case "mb":
                 return size.toMb();
@@ -53,7 +55,12 @@ public class Directory {
         }
     }
 
-    public void listElements(){
+    public void calculateInfos(){
+        listElements();
+        calculateSize();
+    }
+
+    private void listElements(){
 
         File[] fs = new File(this.path).listFiles();
         if(fs == null) return;
@@ -66,6 +73,21 @@ public class Directory {
                 addSubDirectory(subDir);
             }
         }
+    }
+
+    private void calculateSize(){
+        long totalSize = 0;
+
+        for(File f : this.files){
+            totalSize += f.length();
+        }
+
+        for (Directory d: this.subDirectories) {
+            d.calculateSize();
+            totalSize += d.getSize("");
+        }
+
+        this.size = new Size(totalSize);
     }
 
     private void addSubDirectory(Directory subDir){

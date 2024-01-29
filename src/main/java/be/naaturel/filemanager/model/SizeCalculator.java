@@ -58,18 +58,6 @@ public class SizeCalculator implements IThreadBuilder<Task<Void>> {
         System.out.println(totalSize);
         return totalSize;
 
-        /*File[] files = folder.listFiles();
-
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile()) {
-                    size += file.length();
-                } else {
-                    size += computeSize(file);
-                }
-            }
-        }*/
-
     }
 
 

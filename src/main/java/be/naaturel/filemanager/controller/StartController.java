@@ -26,23 +26,10 @@ public class StartController {
     }
 
     private void displayInfos(){
-        //List<String> files = this.analyser.listFiles();
 
         for (Directory d : this.analyser.getDir().getSubDirectories()) {
-
-            //String completePath = String.format("%s/%s/", extractPath(), file);
             Label l = new Label();
-            //l.setText(file);
-
-            l.textProperty().bind(this.analyser.getTask().messageProperty());
-
-            /*try {
-                double size = this.analyser.getSize();
-                l.setText(String.format("%s (%.2f Gb)", l.getText(), size));
-            } catch (Exception e) {
-                l.setText(String.format("%s (%s)", l.getText(), e.getMessage()));
-            }*/
-
+            l.setText(String.format("%s %.2f", d.getPath(), d.getSize("gb")));
             analyseBox.getChildren().add(l);
         }
     }
