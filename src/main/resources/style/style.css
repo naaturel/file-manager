@@ -1,0 +1,23 @@
+
+.container {
+    -fx-border-color: black;
+    -fx-spacing: 20;
+    -fx-font-size: 16;
+}
+
+.inputBox {
+    -fx-background-color: pink;
+
+}
+
+.analyseBox
+{
+    -fx-background-color: red;
+    -fx-width: 33%;
+}
+
+.detailsBox
+{
+    -fx-background-color: #5b3bf1;
+    -fx-width: 33%;
+}

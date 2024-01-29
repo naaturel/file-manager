@@ -1,14 +1,6 @@
 package be.naaturel.filemanager.model;
 
-import javafx.concurrent.Task;
-
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 
 public class Analyser {
 
@@ -24,6 +16,10 @@ public class Analyser {
 
     public Directory getDir(){
         return this.dir;
+    }
+
+    public List<Directory> getSubDirs(){
+        return this.dir.getSubDirectories().get(0).getSubDirectories();
     }
 
     public double getSize() {
