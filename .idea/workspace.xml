@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="Initial commit">
+    <list default="true" id="5a408b89-3325-4d66-a3a7-bcb8c708f5b3" name="Changes" comment="Handle analyser in a cleaner way">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/IThreadBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/SizeCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/controller/StartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/DirectoryAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Size.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706352875936</updated>
-      <workItem from="1706352876686" duration="13398000" />
+      <workItem from="1706352876686" duration="29382000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1706367001184</created>
@@ -94,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706367001184</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Handle analyser in a cleaner way">
+      <created>1706372097330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706372097330</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +123,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Handle analyser in a cleaner way" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handle analyser in a cleaner way" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/be/naaturel/filemanager/model/Analyser.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

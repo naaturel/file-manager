@@ -10,6 +10,10 @@ public class Size {
         this.value = 0;
     }
 
+    public Size(long value){
+        this.value = value;
+    }
+
     public void setValue(long value){
         this.value = value;
     }

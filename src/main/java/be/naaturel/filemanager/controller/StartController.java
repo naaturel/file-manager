@@ -1,12 +1,12 @@
 package be.naaturel.filemanager.controller;
 
 import be.naaturel.filemanager.model.Analyser;
+import be.naaturel.filemanager.model.Directory;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.util.List;
 
 public class StartController {
@@ -20,26 +20,28 @@ public class StartController {
     @FXML
     protected void onStartButtonClick() {
         analyser = new Analyser(extractPath());
+        analyser.startAnalyse();
         clearAnalyseBox();
-        getFiles();
+        displayInfos();
     }
 
-    private void getFiles(){
-        List<String> files = this.analyser.listFiles();
+    private void displayInfos(){
+        //List<String> files = this.analyser.listFiles();
 
-        for (String file : files) {
+        for (Directory d : this.analyser.getDir().getSubDirectories()) {
 
-            String completePath = String.format("%s/%s/", extractPath(), file);
-            double size = 0;
+            //String completePath = String.format("%s/%s/", extractPath(), file);
             Label l = new Label();
-            l.setText(file);
+            //l.setText(file);
 
-            try {
-                size = this.analyser.getSize();
-                l.setText(l.getText() + " (" + String.format("%.2f", size) + " Gb)");
+            l.textProperty().bind(this.analyser.getTask().messageProperty());
+
+            /*try {
+                double size = this.analyser.getSize();
+                l.setText(String.format("%s (%.2f Gb)", l.getText(), size));
             } catch (Exception e) {
-                l.setText(l.getText() + " " + e.getMessage());
-            }
+                l.setText(String.format("%s (%s)", l.getText(), e.getMessage()));
+            }*/
 
             analyseBox.getChildren().add(l);
         }
@@ -52,5 +54,4 @@ public class StartController {
     private void clearAnalyseBox(){
         analyseBox.getChildren().clear();
     }
-
 }
